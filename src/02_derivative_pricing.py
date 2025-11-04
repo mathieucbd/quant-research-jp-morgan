@@ -55,7 +55,7 @@ def price_gas_storage_contract(
     if injection_dates and withdrawal_dates:
         start_date = min(injection_dates)
         end_date = max(withdrawal_dates)
-        months = int(end_date - start_date).days // 30 + 1
+        months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month) + 1
     else:
         months = 0
 
@@ -64,5 +64,19 @@ def price_gas_storage_contract(
     return total_value
 
 
-    
+# Example usage:
+nat_gas_forecast = pd.read_csv("data/Nat_Gas_Forecast.csv", parse_dates=['Dates'], index_col='Dates')
 
+contract_value_usd = price_gas_storage_contract(
+    price_data=nat_gas_forecast,
+    injection_dates=["2024-10-31", "2024-11-30"],
+    withdrawal_dates=["2025-01-31", "2025-02-28"],
+    injection_rate=500_000,          # MMBtu/month
+    withdrawal_rate=500_000,         # MMBtu/month
+    max_storage=1_000_000,           # MMBtu
+    storage_fee_per_month=100_000,    # USD/month
+    inject_withdraw_fee=0.1,        # USD/MMBtu
+    transport_fee=50_000             # USD/event
+)
+
+print("💰 Contract fair value (USD):", round(contract_value_usd, 2))
