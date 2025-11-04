@@ -1,4 +1,5 @@
 import pandas as pd
+from 01_commodities_analysis import estimate_price
 
 def price_gas_storage_contract(
     price_data: pd.DataFrame,      # DataFrame with 'Prices' column and datetime index
