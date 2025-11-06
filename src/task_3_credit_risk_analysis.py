@@ -1,10 +1,13 @@
 """
-Credit risk analysis and forecasting expected loss.
--------------------------------------------
-This script loads loans data, fits a logistic regression, and calculate the expected loss of a customer.
+Credit Risk Analysis and Expected Loss Forecasting
+--------------------------------------------------
+This script performs end-to-end credit risk modeling using logistic regression.
+It loads and preprocesses loan data, trains a default prediction model, evaluates its
+performance, and estimates the Expected Loss (EL) for a given customer based on
+probability of default (PD), exposure at default (EAD), and loss given default (LGD).
 
 Usage:
-
+    task_3_credit_risk_analysis.py
 """
 
 # ------------------------------
@@ -105,7 +108,7 @@ if __name__ == '__main__':
     model = fit_logistic_regression(X_train_scaled, y_train)
 
     # Evaluate model
-    verbose = True
+    verbose = False
     if verbose:
         display_evaluation(model, X_train_scaled, y_train, X_test_scaled, y_test)
 
