@@ -24,7 +24,27 @@ The project is divided into four main tasks, each simulating a common challenge 
 
 The project separates core logic (`/src`) from analysis and visualizations (`/notebooks`) for clarity and reusability.
 
-. ├── notebooks/ │ ├── task_1_commodities_analysis.ipynb │ ├── task_3_credit_risk_analysis.ipynb │ └── task_4_FICO_score_bucketing.ipynb │ ├── plots/ │ ├── task_1_nat_gas_forecast.png │ ├── task_3_credit_risk_data_correl.png │ ├── task_4_fico_score_distribution.png │ ├── task_4_pd_by_fico_likelihood_optimization.png │ └── ... (all exported plot images) │ ├── src/ │ ├── task_1_commodities_analysis.py │ ├── task_2_derivative_pricing.py │ └── task_3_credit_risk_analysis.py │ ├── .gitignore ├── README.md └── requirements.txt
+.
+├── notebooks/
+│   ├── task_1_commodities_analysis.ipynb
+│   ├── task_3_credit_risk_analysis.ipynb
+│   └── task_4_FICO_score_bucketing.ipynb
+│
+├── plots/
+│   ├── task_1_nat_gas_forecast.png
+│   ├── task_3_credit_risk_data_correl.png
+│   ├── task_4_fico_score_distribution.png
+│   ├── task_4_pd_by_fico_likelihood_optimization.png
+│   └── ... (all exported plot images)
+│
+├── src/
+│   ├── task_1_commodities_analysis.py
+│   ├── task_2_derivative_pricing.py
+│   └── task_3_credit_risk_analysis.py
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
 
 
 ---
@@ -83,3 +103,4 @@ The dynamic programming approach produces buckets with a clear, monotonic relati
     * Detailed analysis and visualizations are in the `.ipynb` files within the `/notebooks` directory.
 
     * Core functions and logic are defined in the `.py` files within the `/src` directory.
+
