@@ -23,7 +23,7 @@ The project is divided into four main tasks, each simulating a common challenge 
 ## 📂 Repository Structure
 
 The project separates core logic (`/src`) from analysis and visualizations (`/notebooks`) for clarity and reusability.
-
+'''
 .
 ├── notebooks/
 │   ├── task_1_commodities_analysis.ipynb
@@ -45,7 +45,7 @@ The project separates core logic (`/src`) from analysis and visualizations (`/no
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+'''
 
 ---
 
@@ -103,4 +103,5 @@ The dynamic programming approach produces buckets with a clear, monotonic relati
     * Detailed analysis and visualizations are in the `.ipynb` files within the `/notebooks` directory.
 
     * Core functions and logic are defined in the `.py` files within the `/src` directory.
+
 
