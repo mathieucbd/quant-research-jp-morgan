@@ -42,6 +42,7 @@ The project separates core logic (`/src`) from analysis and visualizations (`/no
 │   ├── task_1_commodities_analysis.py
 │   ├── task_2_derivative_pricing.py
 │   └── task_3_credit_risk_analysis.py
+│   └── task_4_FICO_score_bucketing.py
 │
 ├── .gitignore
 ├── README.md
